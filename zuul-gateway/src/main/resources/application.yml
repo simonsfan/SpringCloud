@@ -1,0 +1,34 @@
+#端口
+server:
+  port: 10010
+#注册到Eureka中的实例名
+spring:
+  application:
+    name: zuul-gataway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8500/eureka/
+  instance:
+     prefer-ip-address: true
+#加上超时参数
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  routes:
+    user-provider: /user/**
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+

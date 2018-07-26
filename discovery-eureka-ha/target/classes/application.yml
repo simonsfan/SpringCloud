@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: discovery-eureka-ha
+---
+spring:
+  profiles: node1
+server:
+       port: 8501
+eureka:
+  instance:
+    hostname: node1
+  client:
+    serviceUrl:
+      defaultZone: http://node2:8502/eureka/
+  server:
+    enable-self-preservation: false           #关闭Eureka Server自我保护模式
+    eviction-interval-timer-in-ms: 1000   #Eureka Server清理无效的节点时间间隔
+---
+spring:
+  profiles: node2
+server:
+  port: 8502
+eureka:
+  instance:
+    hostname: node2
+  client:
+    serviceUrl:
+      defaultZone: http://node1:8501/eureka/
+  server:
+       enable-self-preservation: false
+       eviction-interval-timer-in-ms: 1000

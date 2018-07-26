@@ -1,0 +1,8 @@
+server:
+  port: 8500
+eureka:
+  client:
+    registerWithEureka: false  #是否将自己注册到Eureka Server,默认true
+    fetchRegistry: false            #是否从Eureka Server获取注册信息，默认true
+    serviceUrl:
+     defaultZone: http://localhost:8500/eureka      #与Eureka Server交互的地址，查询、注册服务关联此地址

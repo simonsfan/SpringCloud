@@ -1,0 +1,10 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: ticket-consumer-ribbon-without-eureka
+user-provider:    #这里是用户微服务的节点名称
+  ribbon:
+      listOfServers: localhost:8000,localhost:8001
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
