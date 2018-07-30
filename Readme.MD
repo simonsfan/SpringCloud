@@ -16,6 +16,7 @@
 <h3>12、zuul-gateway：Zuul构建微服务网关示例demo<br/></h3>
 
 <h3>对应的csdn博客地址：[https://blog.csdn.net/fanrenxiang/article/category/7233480]<br/></h3>
+<h3>文章中使用到的数据库连接我这里改为了域名的形式，配置在了hosts文件里面，您可以参考博客https://blog.csdn.net/fanrenxiang/article/details/80695364</h3>
 
 <h3>参考资料</h3>
 <h3>1、SpringCloud官网：[https://projects.spring.io/spring-cloud/]</h3>
