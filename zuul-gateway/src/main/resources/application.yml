@@ -23,6 +23,9 @@ zuul:
     connect-timeout-millis: 60000
   routes:
     user-provider: /user/**
+  PreRequestZuulFilter:      ##禁用SpringCloud为Zuul开启的一些过滤器，这里以禁用我自定义的PreRequestZuulFilter过滤器为例
+    pre:
+      disable: true
 
 hystrix:
   command:

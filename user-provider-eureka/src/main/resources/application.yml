@@ -19,6 +19,6 @@ mybatis:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8500/eureka/
+      defaultZone: http://localhost:8500/eureka/    #如果Eureka是集群，这里则配置多个，例如 defaultZone: http://localhost:8500/eureka/,http://localhost:8501/eureka/
   instance:
      prefer-ip-address: true
