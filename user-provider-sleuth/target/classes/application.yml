@@ -18,7 +18,7 @@ logging:
   level:
     root: info
     org.springframework.web.servlet.DispatcherServlet: debug
-
+    org.springframework.cloud.sleuth: debug
 # mybatis扫描信息
 mybatis:
   typeAliasesPackage: com.simons.cn.bean       #实体对象所以在包

@@ -12,7 +12,6 @@ spring:
   application:
     name: user-provider-sleuth
 
-
 #日志信息
 logging:
   level:
